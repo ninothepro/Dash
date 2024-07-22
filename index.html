@@ -14,30 +14,39 @@
             align-items: center;
             height: 100vh;
             margin: 0;
+            overflow: hidden;
         }
         .dashboard {
             text-align: center;
-            padding: 20px;
-            border-radius: 10px;
+            padding: 20px 40px;
+            border-radius: 15px;
             background: rgba(255, 255, 255, 0.1);
-            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+            box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+            animation: fadeIn 2s ease-in-out;
         }
         .welcome {
-            font-size: 2em;
-            margin-bottom: 10px;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            letter-spacing: 0.05em;
+            animation: textGlow 2s infinite alternate;
         }
         .time, .date, .weather {
-            font-size: 1.5em;
-            margin: 10px 0;
+            font-size: 1.8em;
+            margin: 15px 0;
+            letter-spacing: 0.05em;
+            animation: textGlow 2s infinite alternate;
         }
-        .futuristic {
-            border: none;
-            outline: none;
-            background: none;
-            color: #ffffff;
-            font-size: 1.5em;
-            font-family: 'Courier New', Courier, monospace;
-            letter-spacing: 0.1em;
+        .weather {
+            margin-top: 25px;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes textGlow {
+            from { text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); }
+            to { text-shadow: 0 0 20px rgba(255, 255, 255, 1); }
         }
     </style>
 </head>
